@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- 제이쿼리 파일 참조 -->
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+
+    <!-- 
+        제이쿼리 $(선택자)를 통해서 요소를 얻으면, 반환으로 객체를 돌려받습니다.
+        $(선택자)[인덱스]를 이용해서 엘리먼트 형태로 값을 꺼낼 수 있으며,
+        결론적으로 $(선택자).제이쿼리함수를 이용해서 js작업을 빠르게 처리할 수 있습니다.
+     -->
+    <input type="text" id="apple" value="홍길동"><br/>
+    
+    <input type="text" class="melon" value="김길동"><br/>
+    <input type="hidden" value="이순신"><br/>
+    
+
+    <script>
+        var a1=document.getElementById("apple");
+        console.log(a1);
+
+        var a2=$("#apple");
+        console.log(a2);
+
+        var a3=$("#apple")[0];
+        console.log(a3);
+
+        console.log("----------------------------------")
+
+
+        //JS
+        var b1=document.querySelector(".melon").value;
+
+        console.log(b1);
+
+        //JQUERY
+        var b2=$(".melon").val();
+        console.log(b2);
+
+        console.log("-------------------------------------")
+
+        //값의변경
+        var c1=$("input[type=hidden").val();
+        console.log(c1);
+
+        var c2=$("input[type=hidden").val("신사임당");
+        console.log(c2);
+
+    </script>
+
+
+
+</body>
+</html>

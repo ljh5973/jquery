@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- 제이쿼리 파일 참조 -->
+        <script src="js/jquery.js"></script>
+</head>
+<body>
+
+
+    <h3>li 태그에 동일한 이벤트를 등록하자</h3>
+
+    <ul id="test">
+        <li>태그1</li>
+        <li>태그2</li>
+        <li>태그3</li>
+
+    </ul>
+    
+    <script>
+        //1st
+        // var tag=document.querySelectorAll("#test li");
+        // for(var i=0; i<tag.length; i++){
+        //     tag[i].onclick=function(){
+        //         alert(" 눌렸다");
+        //         console.log(i);
+        //     }
+
+        // }
+        //1st - Jquery
+        // $("#test li").click(function(){
+        //     console.log($(this).html());    //제이쿼리의 실험대상 선택방법
+        // })
+        //2nd - 이벤트 위임방식
+        // var test=document.getElementById("test");
+        // test.onclick=function(){
+        //     if(event.target.tagName !="LI")return;
+        //     console.log(1);
+        // }
+
+        $("#test").on("click","li",function(){
+            console.log($(this).html());
+        })
+
+
+    </script>
+
+    <div id="box">
+        <!-- 비워둠 -->
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#box").on("click", "a", function(){
+                event.preventDefault();
+                alert("실행될걸");
+            })
+            var str="";
+            str += '<a href="#">태그1</a>';
+            str += '<a href="#">태그2</a>';
+            str += '<a href="#">태그3</a>';
+            $("#box").html(str);
+        });
+    </script>
+    
+</body>
+</html>

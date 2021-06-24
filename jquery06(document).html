@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 파일 참조 -->
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+
+    <h2>window.onload vs document.ready</h2>
+
+    <!-- <script>
+       window.onload=function(){
+           document.getElementById("btn").onclick=function(){
+               alert("실행ㄷㅇㅇㅇㅇ");
+           }
+       }
+    </script> -->
+    
+    <script>
+
+    //document ready()는 여러개 사용이 가능합니다.
+        $(document).ready(function(){
+            document.getElementById("btn").onclick=function(){
+                alert("실행되었수빈다.");
+            }
+            alert("왜안돼?");
+        });
+
+
+        $(document).ready(function(){
+            console.log(1);
+        })
+    </script>
+
+    
+
+
+
+    <button type="button" id="btn">이벤트버튼</button>
+    <!--
+         <input type="text" id="apple" value="홍기롱">
+    <input type="text" id="melon" value="홍찬호">
+    <input type="text" id="banana" value="홍석민">
+
+    <button onclick="check()">event button</button>
+
+
+    <script>
+        $(document).ready(function(){
+            alert("페이지를 들어가자마자 경고문~")
+        });
+    </script> 
+    -->
+    
+</body>
+</html>

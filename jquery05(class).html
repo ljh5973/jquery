@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 파일 참조 -->
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    
+    <h3>클래스 제어 addClass, removeClass, toggleClass</h3>
+
+
+    <button id="btn" class="btn btn-default">클래스 조작 확인</button>
+
+    <script>
+
+        //JS
+        // document.getElementById("btn").classList.add("myBtn");
+        // document.getElementById("btn").classList.remove("btn");
+        var a=document.getElementById("btn");
+        a.onclick=function(){
+            a.classList.toggle("btn-default");
+        }
+
+
+        //Jquery
+        $("#btn").addClass("addddddddClass");
+        $("#btn").removeClass("btn");
+
+        
+
+    </script>
+
+    <h3>토글 방식</h3>
+    <button id="toggle" class="dark">토글</button>
+
+    <script>
+        var toggle=document.querySelector("#toggle");
+        toggle.onclick=function(){
+            toggle.classList.toggle("aaa");
+            $("#toggle").toggleClass("aaa");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 파일 참조-->
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+
+    <h3>innerHTML을 제이쿼리 html()</h3>
+
+    <div class="test"></div>
+
+    <div class="test-html"></div>
+
+
+    <script>
+        // js
+        // document.querySelector(".test").innerHTML = "<a href='jquery03.html'>아무것도 아니야~</a>"
+
+        // Jquery
+        $(".test").html("<a href='jquery02.html'>열심히 한단말이야~</a>");  //제이쿼리 innerHTML
+
+        $(".test").html("홍길동");
+
+
+        // 값 얻기
+        var a=$(".test").html();
+        console.log(a);
+
+        //순수 문자열의 형태로 삽입하기 text()
+        $(".test-html").text("<a href='jquery02.html'>잘할거란 말이야~~</a>");
+    </script>
+
+    
+</body>
+</html>
